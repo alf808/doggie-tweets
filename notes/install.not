@@ -1,0 +1,22 @@
+conda env create -f environment.orig
+
+in order to install tweepy, I had to do the following in my virtual env
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+conda install tweepy
+
+conda env export > environment.yml
+
+I recreated the original environment, and included conda-forge as secondary source. see environment.yml
+
+replaced name of variable
+sed -i 's/wrd_twit_data/twitarch_df/g' wrangle_act.ipynb
+
+resources:
+http://docs.tweepy.org/en/latest/
+http://docs.tweepy.org/en/v3.5.0/auth_tutorial.html
+https://developer.twitter.com/en/docs/authentication/guides/authentication-best-practices
+https://knowledge.udacity.com/questions/66949#66975
+https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only
+
+
