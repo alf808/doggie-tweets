@@ -1,0 +1,5 @@
+I know that many are using tweepy's `OAuthHandler` which satisfies twitter's oauth 1 authentication. An easier way is to use tweepy's `AppAuthHandler` which uses oauth 2 authentication. There is no need for `access_token` and `access_token_secret` at all. I was able to accomplish the tweepy task with the following code:
+```
+auth = tweepy.AppAuthHandler(consumer_key, consumer_secret)
+api = tweepy.API(auth)
+```
