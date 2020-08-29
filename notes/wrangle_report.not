@@ -1,0 +1,22 @@
+Gathering data was relatively straightforward. Although I do not understand twitter (I still do not), I figured that data is data and twitter API is just another API. Tweepy's documentation is quite well done. It facilitated access to twitter's API methods. In fact tweepy did everything. I did not have to understand twitter at all. Although APIs fascinate me, Twitter does not. A platform that is used by racist nationalists in USA is a platform in which no one should take interest.
+
+The one thing that interested me with twitter is the authentication part. I discovered that twitter allows both OAuth 1.0a and OAuth 2.0. Fortunately, tweepy has 2 different handlers for both, namely tweepy.OAuthHandler and tweepy.AppAuthHandler, respectively.
+
+I experimented with both authentication handlers just accessing only one twit ID with following code:
+```
+twitid_lst = twitarch_df.tweet_id.values
+one_tweet = tweet_id_lst[0]
+tweet = api.get_status(one_tweet, tweet_mode='extended')
+print(tweet)
+```
+
+For the purpose of this project, I opted to use AppAuthHandler since it required NO access tokens -- just the bearer token that was generated at the same time as the twitter API keys.
+I also used `extended` mode as opposed to `compat` mode since I did not really know what other information I needed from twitter for this purpose. I wanted to gain access to twitter data and APIs exactly ONE time and never again. And yes, other than the quick experimentation with the authentication handlers, I only had to use this twitter developer account exactly once, and hopefully never again.
+
+These are my analogues in order to dummify the already moronic twitter platform.
+tweet: a text message
+retweet: a text message that has been shared.
+retweet count: the number of times a specific tweet has been shared
+favorite count: I have absolutely no idea.
+
+

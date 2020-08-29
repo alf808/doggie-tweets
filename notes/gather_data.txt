@@ -1,0 +1,18 @@
+I gathered data from multiple different sources -- extracted data from a file given to us in the project, downloaded a file from the Internet using the `requests` library, and accessed twitter's data through an API. The data were in csv, tsv and JSON formats. After cleaning, I will merge all the data into one master file.
+
+assessment
+visual and programmatic
+
+visual assessment with pandas head or tail
+.info
+
+2 steps
+detecting issues and documenting issues
+
+quality
+something is spelled wrong for example
+or see everything in google sheets, look for quality and structural issues.
+
+### quality
+
+### structural
