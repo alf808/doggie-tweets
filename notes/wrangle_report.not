@@ -28,5 +28,11 @@ Some of the ratings (based on rating_numerator and rating_denominator fields) ar
 The text have mixed items. But probably intentional
 The fields doggo floofer pupper and puppo seem to be mutually exclusive.
 
+timestamp validity (cannot take advantage of time series functionality)
+expanded_url completeness
+
+
+there might be some consistency issues with capitalization in the image predictions table. But I think it's quite trivial.
+
 
 
