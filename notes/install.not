@@ -18,5 +18,7 @@ http://docs.tweepy.org/en/v3.5.0/auth_tutorial.html
 https://developer.twitter.com/en/docs/authentication/guides/authentication-best-practices
 https://knowledge.udacity.com/questions/66949#66975
 https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only
-
-
+https://stackoverflow.com/questions/25351968/how-to-display-full-non-truncated-dataframe-information-in-html-when-convertin
+https://pandas.pydata.org/pandas-docs/stable/reference/frame.html
+https://stackoverflow.com/questions/60529588/how-can-i-cast-a-pandas-string-column-to-the-new-nullable-int64-type
+https://www.geeksforgeeks.org/convert-the-column-type-from-string-to-datetime-format-in-pandas-dataframe/

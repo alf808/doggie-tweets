@@ -38,3 +38,8 @@ Tidiness (structural)
 According to project details, those terms are different dog stages hence they are value terms and should not be field names.
 The fields doggo floofer pupper and puppo should be mutually exclusive since the dogtionary implied ordinal categories with the use of "stages". However, visually there are some animals that are combination of stages. In fact the dogtionary defines each stage as forms of other stages. So there is no clear cut definition of the stages. 4 variables
 the field `retweeted_status_id` seems redundant as every row that has data in that field also has text the begins with "RT"
+
+
+Structural
+IDs as floats do not make sense at all. IDs as integers might make sense. I do not know how twitter uses its tweet_id but for my purpose I will create a new column with tweet_id as strings.
+
