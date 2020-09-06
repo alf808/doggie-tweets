@@ -1,0 +1,17 @@
+# Wrangling Report
+
+The data wrangling process of gather, assess, clean is definitely iterative as I discovered throughout this project. Gathering data was relatively straightforward. However, extreme care was undertaken while gathering data from Twitter using its API methods.
+
+I am not familiar with Twitter but I am familiar with API’s. I figured that data is data and twitter API is just another API. Fortunately, Tweepy's documentation is quite well done. It facilitated access to twitter's API methods. In fact Tweepy did everything. I did not have to understand Twitter platform at all. 
+
+During the gathering part, the most interesting was the API authentication. I discovered that Twitter allows both OAuth 1.0a and OAuth 2.0. Fortunately, Tweepy has 2 different handlers for both, namely tweepy.OAuthHandler and tweepy.AppAuthHandler, respectively. I experimented with both authentication handlers just accessing only one piece of data.
+
+For the purpose of this project, I opted to use AppAuthHandler since it required NO access tokens -- just the bearer token that was generated simultaneously with the Twitter API keys. I also used `extended` mode as opposed to `compat` mode since I did not really know what other information I would need from Twitter for this project. I wanted to use this twitter developer account exactly once.
+
+Although I only had to gather once, the process of assessing and cleaning was done iteratively multiple times. The master code is cleaned up and organized for readability and comprehension. It is not evident from the code that I used pandas methods among many like `info()`, `head()`, `value_counts()`, `isnull()` repeatedly.
+
+Data cleaning was more fascinating than I expected. Some tasks like capitalization were trivial; some tasks were much more complicated than some. The 3 most challenging were conflating the dog stages into one column, extracting the ratings, and using the information from 6 predictions columns into 2 new variables. I discovered that the `text` column contains information from which other columns were derived, like `doggo`, `floofer`, `pupper`, `puppo`, `rating_numerator`, and `rating_denominator`. I used regular expressions on the `text` column to extract more info for new `dog_stage` column and to gather the proper `rating_numerator` and `rating_denominator`.
+
+Possibly the most interesting part of the project was the process of coding and checking using the prediction columns to create a new `dog_breed_prediction` and `dog_breed_confidence`. I took advantage of the boolean in `p1_dog`, `p2_dog`, and `p3_dog` in order to determine which `p1`, `p2`, or `p3` predictions I would use in `dog_breed_prediction` and accordingly the confidence degree in `dog_breed_confidence`.
+
+Finally, some interesting things were happening as I merged dataframes. For awhile, I could not figure out why a column’s datatype would change upon merging. I discovered that `pandas` does a form of upcasting like `int64` to `float64` (and more frustratingly `bool` to `object`) if a left join in which the left table has keys that are not in the right table. It made sense. But it took some experimentation. I also discovered a form of casting when reading a csv into dataframe. I would write to csv (`to_csv()`), then read in csv (`read_csv()`). The `datetime` `dtype` of `timestamp` would always cast to `object` upon reading. A simple fix was set the flag `parse_dates` to `True` when using `read_csv()`

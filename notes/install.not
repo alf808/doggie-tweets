@@ -13,14 +13,14 @@ replaced name of variable
 sed -i 's/wrd_twit_data/twitarch_df/g' wrangle_act.ipynb
 
 resources:
-http://docs.tweepy.org/en/latest/
 http://docs.tweepy.org/en/v3.5.0/auth_tutorial.html
 https://developer.twitter.com/en/docs/authentication/guides/authentication-best-practices
-https://knowledge.udacity.com/questions/66949#66975
 https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only
+https://knowledge.udacity.com/questions/66949#66975
 https://stackoverflow.com/questions/25351968/how-to-display-full-non-truncated-dataframe-information-in-html-when-convertin
 https://pandas.pydata.org/pandas-docs/stable/reference/frame.html
 https://stackoverflow.com/questions/60529588/how-can-i-cast-a-pandas-string-column-to-the-new-nullable-int64-type
 https://www.geeksforgeeks.org/convert-the-column-type-from-string-to-datetime-format-in-pandas-dataframe/
 https://stackoverflow.com/questions/29177498/python-pandas-replace-nan-in-one-column-with-value-from-corresponding-row-of-sec
 https://docs.python.org/3/howto/regex.html
+https://stackoverflow.com/questions/34168764/how-can-i-read-a-datetime-from-pandas
